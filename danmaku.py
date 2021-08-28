@@ -39,7 +39,7 @@ def check_new_danma():
             update_time = item["timestamp"]
             print(datetime.utcfromtimestamp(item["timestamp"]).strftime('[%Y-%m-%d %H:%M:%S]'), "[" + item["user_name"] + "]:", item["danmaku"])
             system(notify_command.format(item["user_name"], item["danmaku"]))
-            fanyi(utem["user_name"] + "\n" + item["danmaku"])
+            fanyi(item["user_name"] + "\n" + item["danmaku"])
         time.sleep(2)
 
 
